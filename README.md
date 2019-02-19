@@ -1,2 +1,2 @@
 # PomodoroClock-
-Pomodora Clock: JavaScript (jQuery, Bootstrap), CSS + HTML 
+Pomodora Clock built using: JavaScript (jQuery, Bootstrap), CSS + HTML 
