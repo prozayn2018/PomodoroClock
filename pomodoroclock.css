@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
+
+body{
+  float: left;
+  width: 914px;
+}
+
+#wrapper{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: white;
+  overflow-y:scroll;
+}
+
+#container{
+position: absolute;
+ display: grid;
+ grid-template-columns: 1fr;
+ grid-template-rows:  80px 840px;
+ min-width: 100%;
+ max-width: 100%;
+ min-height: 100%;
+ max-height: 100%;
+ float: left;
+ z-index:8;
+
+}
+
+.grid-item{
+  position: relative;
+  background: rgb(224, 68, 51);
+
+}
+
+#top{
+  background-color: white;
+}
+
+#textleft{
+  position: absolute;
+  font-family: 'Luckiest Guy', cursive;
+  color: rgb(224, 68, 51);
+  font-size: 50px;
+  top: 30px;
+  left: 10px;
+
+}
+
+#timer{
+  position: absolute;
+  font-family: font-family: 'Poiret One', cursive;
+  color: white;
+  font-size: 140px;
+  top: 170px;
+  left: 450px;
+  font-weight: lighter;
+}
+
+#play{
+  position: absolute;
+  left: 470px;
+  top: 430px;
+  font-size: 80px;
+  color: white;
+  opacity: .9;
+}
+
+#pause{
+  position: absolute;
+  left: 585px;
+  top: 430px;
+  font-size: 80px;
+  color: white;
+  opacity: .9;
+}
+
+#stop{
+  position: absolute;
+  left: 696px;
+  top: 430px;
+  font-size: 80px;
+  color: white;
+  opacity: .9;
+}
+
+.transparent-circle {
+  position: absolute;
+    background-color: rgba(204, 0, 102, 0);
+    border: 3px solid white;
+    height:560px;
+    width:560px;
+    -webkit-border-radius:475px;
+    -moz-border-radius:475px;
+    left: 350px;
+    top: 70px;
+}
+
+
+#three{
+  position: absolute;
+  left: 430px;
+  top: 360px;
+  opacity: .9;
+}
+
+#twentyfive{
+  background-color: white;
+  color: rgb(224, 68, 51);
+  border-color: rgb(224, 68, 51);
+  width: 130px;
+  height: 50px;
+  text-align: center;
+  padding-top: 13px;
+  font-family: font-family: 'Poiret One', cursive;
+  font-weight: lighter;
+}
+
+#five{
+  background-color: white;
+  color: rgb(224, 68, 51);
+  border-color: rgb(224, 68, 51);
+  width: 130px;
+  height: 50px;
+  text-align: center;
+  padding-top: 13px;
+  font-family: font-family: 'Poiret One', cursive;
+  font-weight: lighter;
+}
+
+#fifteen{
+  background-color: white;
+  color: rgb(224, 68, 51);
+  border-color: rgb(224, 68, 51);
+  width: 130px;
+  height: 50px;
+  text-align: center;
+  padding-top: 13px;
+  font-family: font-family: 'Poiret One', cursive;
+  font-weight: lighter;
+}
