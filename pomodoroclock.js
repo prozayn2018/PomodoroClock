@@ -6,45 +6,52 @@ function timer(){
 
   globalArray = []
   cloneArray = []
+  t = 0;
 
   $(document).on("click", function (event) {
 
-    var yes = event.target.id
+    function work(){
+
+    yes = event.target.id;
     globalArray.push(yes);
     console.log(globalArray)
-    y = globalArray.length
+    y = globalArray.length;
     console.log(y)
 
-    if(y ==2 ){
-      slice = globalArray.slice(1)
+
+    if(y === 2 ){
       clearTimeout(t);
+      slice = globalArray.slice(1)
       globalArray = []
+      yes = slice;
+      work();
+    }else if(y <=1 ){
+      startCount();
+    };
+  };
 
-    }else if(y == 1){
+  work();
 
-    // don't touch, for twentyfive
-    var add = 59;
-    var timer25 = 0;
-    // add / timer for five min
-    var timerOn = 25;
-    // work only 25
     function startCount() {
+
+      add = 59;
+      timer25 = 0;
+
       if(yes == 'twentyfive'){
-        timer25 = 25;
+        timer25 = 24;
         twentyfivemin();
       }else if(yes == 'five'){
         timer25 = 4;
         twentyfivemin();
       }else if (yes == 'fifteen') {
-        timer25 = 15;
+        timer25 = 14;
         twentyfivemin();
+      }else if(yes == ''){
+        clearTimeout(t)
       }
     };
-    startCount();
       //recursive function; analogous to a loop
-      // logic for twentyfive min button
-      // no call for twentyfivemin at bottom so it avoids being double called
-      //remember calculator double callback issue
+
     function twentyfivemin(){
 
       if(add !== 0 && add >= 10 && add < 60 && timer25 !== 0){
@@ -59,9 +66,9 @@ function timer(){
       add = add - 1;
     };
       // everytime logic is called, set timeout delay's console - log by one second.
-      t = setTimeout(twentyfivemin, 1000);
+      t = setTimeout(function(){twentyfivemin()}, 1000);
     };
-   };
+
   });
 };
 timer()
