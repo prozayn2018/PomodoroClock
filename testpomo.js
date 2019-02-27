@@ -25,12 +25,44 @@ $("#items").click(function(){
 
 
 
+    function twofiveClicked(){
+      var a;
+      $('.page-link').click(function(e){
+        var attr = $(this).attr('id');
+        console.log(attr)
+        $(this).data("clicked", 25);
+      });
 
+      var a = $(".page-link").trigger("click").data("clicked");
+      return a;
+    }
+    //global variables here; stored as data(25, 5, 15)
+    twofive = twofiveClicked()
 
     // enable once done with program
     // $(document).ready(function(){
 
 var b = jQuery(this).attr("id");
+
+$("#twentyfive").click(function(){
+  var be = $(this).attr('id');
+  alert('clicked!')
+  console.log(be +':ID');
+});
+};
+
+
+function fiveClicked(){
+  var c;
+  $("#twentyfive, #five, #fifteen").click(function () {
+ if (this.id == 'twentyfive') {
+    alert('twentyfive clicked');
+ }
+ else if (this.id == 'five') {
+    alert('five clicked');
+ }
+});
+}
 
     //  $("#twentyfive").click(function(){
         //needs to call function that will drop timer by one second when clicked
@@ -106,3 +138,33 @@ var b = jQuery(this).attr("id");
     }).mouseleave(function(){
       $(this).css("color", "blue");
     });
+
+
+
+    function twofiveClicked(){
+      var a;
+      var b = 0;
+      $('a').on('click', function(event){
+        var attr = $(this).attr('id');
+        console.log(attr)
+        $(this).data("clicked", attr);
+        b = true;
+      });
+
+      var a = $("a").trigger("click").data("clicked");
+      return a;
+    }
+
+
+
+    $(document).on("click", function (event) {
+        var yes = event.target.id
+        console.log(yes)
+    });
+
+
+    if(y ==2 ){
+      clearTimeout(t);
+      globalArray = []
+      startCount()
+    }
